@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import "./App.css";
 
 type FormEl = React.FormEvent<HTMLFormElement>;
 interface Todo {
@@ -7,7 +6,7 @@ interface Todo {
   status: boolean;
 }
 
-export default function App() {
+const ToDoList = () => {
   const [value, setValue] = useState("");
   const [todos, setTodos] = useState<Todo[]>([]);
 
@@ -63,4 +62,6 @@ export default function App() {
       </section>
     </Fragment>
   );
-}
+};
+
+export default ToDoList;
